@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrazione - Hackathon Bolo 2025</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="left-header">
+    <div class="logo-slot">LOGO</div>
+    <div class="header-sponsors">
+      <div class="header-sponsor-logo"></div>
+      <div class="header-sponsor-logo"></div>
+      <div class="header-sponsor-logo"></div>
+    </div>
+  </div>
+
+  <nav>
+    <a href="index.html">About</a>
+    <a href="sponsors.html">Sponsors</a>
+    <a href="register.html">Register</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+</header>
+
+<main>
+  <div class="card">
+    <h2>Registrazione</h2>
+    <p>
+      Compila il form per candidarti all’Hackathon Bolo 2025. <br>
+      <strong>Posti limitati: massimo 75 partecipanti.</strong><br>
+      Se vuoi partecipare con qualcuno, <strong>indicate entrambi i nomi nella descrizione</strong>.
+    </p>
+
+    <form id="registerForm">
+      <label>Nome</label>
+      <input type="text" id="nome" required>
+
+      <label>Cognome</label>
+      <input type="text" id="cognome" required>
+
+      <label>Email</label>
+      <input type="email" id="email" required>
+
+      <label>Descrizione (parlaci di te, competenze, interessi, eventuali compagni di team)</label>
+      <textarea id="descrizione" required></textarea>
+
+      <button type="submit">Invia registrazione</button>
+    </form>
+
+    <p id="result"></p>
+  </div>
+</main>
+
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+<script>
+  // INCOLLA QUI LA TUA CONFIGURAZIONE FIREBASE
+const firebaseConfig = {
+  apiKey: "AIzaSyDlKHXJT_IRS7ZHwuuPCChOHc5ER95c3JM",
+  authDomain: "hackbolo-2fd8f.firebaseapp.com",
+  projectId: "hackbolo-2fd8f",
+  storageBucket: "hackbolo-2fd8f.firebasestorage.app",
+  messagingSenderId: "852464352945",
+  appId: "1:852464352945:web:50b080fb4128154eafec90",
+  measurementId: "G-9V8D6BMMWQ"
+};
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+  const form = document.getElementById("registerForm");
+  const result = document.getElementById("result");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const cognome = document.getElementById("cognome").value;
+    const email = document.getElementById("email").value;
+    const descrizione = document.getElementById("descrizione").value;
+
+    try {
+      await db.collection("registrazioni").add({
+        nome,
+        cognome,
+        email,
+        descrizione,
+        timestamp: new Date()
+      });
+
+      result.textContent = "Registrazione inviata! Ti contatteremo via email.";
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      result.textContent = "Errore durante la registrazione. Riprova più tardi.";
+    }
+  });
+</script>
+
+</body>
+</html>
