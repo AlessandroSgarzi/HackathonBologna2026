@@ -28,38 +28,36 @@ header {
   width: 100%;
   background: rgba(5,5,15,0.75);
   backdrop-filter: blur(18px);
-  padding: 0 40px;          /* togli il padding verticale, lo gestisce il logo */
+  padding: 0 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
   border-bottom: 1px solid rgba(255,255,255,0.08);
-  height: 100px;            /* altezza fissa dell'header */
+  height: 100px;
 }
 
 header .left-header {
   display: flex;
   align-items: center;
   gap: 22px;
+  height: 100%; /* FONDAMENTALE: permette al figlio di usare height: 100% */
 }
 
 .logo-slot {
-  width: 300px;
-  height: 100%;             /* prende tutta l'altezza dell'header */
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
 .main-logo-img {
-  height: 80px;             /* un po' meno dell'header per il respiro */
+  height: 82px;        /* quasi tutta l'altezza dell'header (100px) */
   width: auto;
   object-fit: contain;
   display: block;
-  max-width: 300px;
-  filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1); /* logo bianco su sfondo nero */
 }
-
 
 /* SPONSOR HEADER */
 .header-sponsors {
@@ -102,18 +100,18 @@ nav a:hover {
 }
 
 nav a::after {
-  content:"";
-  position:absolute;
-  bottom:-6px;
-  left:0;
-  width:0;
-  height:2px;
-  background:var(--accent);
-  transition:0.25s;
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: 0.25s;
 }
 
 nav a:hover::after {
-  width:100%;
+  width: 100%;
 }
 
 /* ---------------- HERO ---------------- */
@@ -126,7 +124,7 @@ nav a:hover::after {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 60px;
+  padding-top: 100px;
 }
 
 .hero::after {
@@ -262,6 +260,7 @@ ul li {
   height: 110px;
   background: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e') center/cover no-repeat;
   border-radius: 12px;
+  flex-shrink: 0;
 }
 
 .organizer-card h4 {
@@ -293,9 +292,9 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-  outline:none;
-  border-color:var(--accent);
-  box-shadow:0 0 12px rgba(0,234,255,0.3);
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 12px rgba(0,234,255,0.3);
 }
 
 textarea {
@@ -346,12 +345,12 @@ button:hover {
   padding: 15px;
   text-align: center;
   border: 1px solid rgba(255,255,255,0.15);
-  transition:0.25s;
+  transition: 0.25s;
 }
 
 .sponsor-card:hover {
-  transform:translateY(-4px);
-  box-shadow:0 0 25px rgba(0,234,255,0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(0,234,255,0.25);
 }
 
 .sponsor-logo {
@@ -362,7 +361,6 @@ button:hover {
   margin-bottom: 10px;
 }
 
-/* TIER COLOR */
 .gold {
   border-color: #ffd700;
   box-shadow: 0 0 18px rgba(255, 215, 0, 0.25);
@@ -383,8 +381,17 @@ button:hover {
 @media (max-width: 700px) {
   header {
     flex-direction: column;
+    height: auto;
     gap: 12px;
     padding: 12px 20px;
+  }
+
+  header .left-header {
+    height: auto;
+  }
+
+  .main-logo-img {
+    height: 55px;
   }
 
   .hero h1 {
@@ -400,14 +407,4 @@ button:hover {
     align-items: flex-start;
   }
 }
-
-
-
-
-
-
-
-
-
-
 
