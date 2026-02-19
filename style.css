@@ -50,14 +50,13 @@ header .left-header {
   align-items: center;
   justify-content: flex-start;
 }
-
 .main-logo-img {
-  height: 100px;        /* quasi tutta l'altezza dell'header (100px) */
-  width: auto;
-  object-fit: contain;
-  display: block;
-  filter: brightness(0) invert(1); /* logo bianco su sfondo nero */
+  height: 120px !important;
+  width: auto !important;
+  max-width: none !important;
+  image-rendering: auto;
 }
+
 
 /* SPONSOR HEADER */
 .header-sponsors {
@@ -407,6 +406,7 @@ button:hover {
     align-items: flex-start;
   }
 }
+
 
 
 
