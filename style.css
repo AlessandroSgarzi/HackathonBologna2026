@@ -52,7 +52,7 @@ header .left-header {
 }
 
 .main-logo-img {
-  height: 82px;        /* quasi tutta l'altezza dell'header (100px) */
+  height: 200px;        /* quasi tutta l'altezza dell'header (100px) */
   width: auto;
   object-fit: contain;
   display: block;
@@ -407,4 +407,5 @@ button:hover {
     align-items: flex-start;
   }
 }
+
 
