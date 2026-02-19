@@ -28,12 +28,13 @@ header {
   width: 100%;
   background: rgba(5,5,15,0.75);
   backdrop-filter: blur(18px);
-  padding: 14px 40px;
+  padding: 0 40px;          /* togli il padding verticale, lo gestisce il logo */
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
   border-bottom: 1px solid rgba(255,255,255,0.08);
+  height: 100px;            /* altezza fissa dell'header */
 }
 
 header .left-header {
@@ -41,23 +42,23 @@ header .left-header {
   align-items: center;
   gap: 22px;
 }
+
 .logo-slot {
-  width: 260px;        /* spazio più grande */
-  height: 120px;
+  width: 300px;
+  height: 100%;             /* prende tutta l'altezza dell'header */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .main-logo-img {
-  height: 90px;         /* quasi tutta l'altezza dell'header */
+  height: 80px;             /* un po' meno dell'header per il respiro */
   width: auto;
   object-fit: contain;
   display: block;
-  max-width: 350px;
+  max-width: 300px;
   filter: brightness(0) invert(1);
 }
-
 
 
 /* SPONSOR HEADER */
@@ -399,6 +400,7 @@ button:hover {
     align-items: flex-start;
   }
 }
+
 
 
 
