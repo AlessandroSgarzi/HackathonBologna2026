@@ -192,7 +192,7 @@ main {
 /* LAYOUT DUE COLONNE */
 .main-layout {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 330px 1fr;
   gap: 30px;
   align-items: start;
 }
@@ -467,3 +467,4 @@ button:hover {
     align-items: flex-start;
   }
 }
+
