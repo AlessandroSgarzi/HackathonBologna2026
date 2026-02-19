@@ -41,30 +41,31 @@ header .left-header {
   align-items: center;
   gap: 22px;
 }
-/* LOGO PRINCIPALE */
 .logo-slot {
-  width: 200px;          /* spazio più grande e proporzionato */
-  height: 80px;
+  width: 260px;        /* spazio più grande */
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
-  padding: 0;
 }
 
-/* LOGO IMG */
 .main-logo-img {
-  height: 75px;          /* ingrandito */
+  height: 110px;       /* LOGO GRANDE */
   width: auto;
   object-fit: contain;
 
-  /* TRASFORMA IL LOGO IN BIANCO */
+  /* Rende il logo bianco */
   filter: brightness(0) invert(1);
 
-  /* Rimuove eventuali bordi o aloni */
-  background: transparent;
+  /* Elimina lo sfondo bianco */
+  mix-blend-mode: screen;
+
+  /* Evita che venga schiacciato */
+  max-width: 100%;
+  max-height: 100%;
   display: block;
 }
+
 
 
 
@@ -407,6 +408,7 @@ button:hover {
     align-items: flex-start;
   }
 }
+
 
 
 
