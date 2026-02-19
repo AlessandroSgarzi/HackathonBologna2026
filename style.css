@@ -146,6 +146,14 @@ nav a:hover::after {
   margin-bottom: 10px;
   font-weight: 800;
   letter-spacing: -1px;
+  background: linear-gradient(135deg, #ffffff 0%, #00eaff 40%, #ff00ff 80%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  /* GLOW doppio per leggibilità */
+  filter: drop-shadow(0 0 18px rgba(0, 234, 255, 0.8)) drop-shadow(0 0 40px rgba(255, 0, 255, 0.5));
+  
 }
 
 .hero h2 {
@@ -467,5 +475,6 @@ button:hover {
     align-items: flex-start;
   }
 }
+
 
 
