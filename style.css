@@ -50,22 +50,13 @@ header .left-header {
 }
 
 .main-logo-img {
-  height: 110px;       /* LOGO GRANDE */
+  height: 140px;
   width: auto;
   object-fit: contain;
-
-  /* Rende il logo bianco */
-  filter: brightness(0) invert(1);
-
-  /* Elimina lo sfondo bianco */
-  mix-blend-mode: screen;
-
-  /* Evita che venga schiacciato */
-  max-width: 100%;
-  max-height: 100%;
   display: block;
+  max-width: 320px;
+  filter: brightness(0) invert(1); /* rende il logo bianco puro */
 }
-
 
 
 
@@ -408,6 +399,7 @@ button:hover {
     align-items: flex-start;
   }
 }
+
 
 
 
