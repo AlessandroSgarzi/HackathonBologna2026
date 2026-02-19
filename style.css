@@ -34,7 +34,7 @@ header {
   justify-content: space-between;
   z-index: 1000;
   border-bottom: 1px solid rgba(255,255,255,0.08);
-  height: 150px;
+  height: 250px;
 }
 
 header .left-header {
@@ -51,7 +51,7 @@ header .left-header {
   justify-content: flex-start;
 }
 .main-logo-img {
-  height: 120px !important;
+  height: 220px !important;
   width: auto !important;
   object-fit: contain;
   display: block;
@@ -407,6 +407,7 @@ button:hover {
     align-items: flex-start;
   }
 }
+
 
 
 
