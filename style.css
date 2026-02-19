@@ -50,12 +50,12 @@ header .left-header {
 }
 
 .main-logo-img {
-  height: 740px;
+  height: 90px;         /* quasi tutta l'altezza dell'header */
   width: auto;
   object-fit: contain;
   display: block;
-  max-width: 320px;
-  filter: brightness(0) invert(1); /* rende il logo bianco puro */
+  max-width: 350px;
+  filter: brightness(0) invert(1);
 }
 
 
@@ -399,6 +399,7 @@ button:hover {
     align-items: flex-start;
   }
 }
+
 
 
 
