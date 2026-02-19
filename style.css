@@ -142,32 +142,46 @@ nav a:hover::after {
 }
 
 .hero h1 {
-  font-size: 3.4rem;
-  margin-bottom: 10px;
+  font-size: 4.8rem;
   font-weight: 800;
   letter-spacing: -1px;
+  margin-bottom: 10px;
   background: linear-gradient(135deg, #ffffff 0%, #00eaff 40%, #ff00ff 80%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-
-  /* GLOW doppio per leggibilità */
   filter: drop-shadow(0 0 18px rgba(0, 234, 255, 0.8)) drop-shadow(0 0 40px rgba(255, 0, 255, 0.5));
-  
 }
 
 .hero h2 {
-  font-size: 1.3rem;
-  color: var(--accent);
-  margin-bottom: 20px;
+  font-size: 1.7rem;
   font-weight: 600;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #00eaff 0%, #ffffff 60%, #ff00ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 10px rgba(0, 234, 255, 0.7));
 }
 
 .hero p {
-  font-size: 1.05rem;
-  color: #cfcfcf;
+  font-size: 1.2rem;
+  color: transparent;
   margin-bottom: 32px;
   line-height: 1.6;
+  background: linear-gradient(90deg, #e0e0e0 0%, #ffffff 50%, #c0f0ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
+}
+
+.hero strong {
+  background: linear-gradient(90deg, #00eaff, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 8px rgba(0, 234, 255, 0.9));
 }
 
 /* CTA */
@@ -475,6 +489,7 @@ button:hover {
     align-items: flex-start;
   }
 }
+
 
 
 
