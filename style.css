@@ -23,6 +23,9 @@ body {
 main {
   padding-top: 130px; /* era 110px, aumentato per compensare l'header */
 }
+.card:first-child {
+  margin-top: 130px;
+}
 
 /* ---------------- HEADER ---------------- */
 
@@ -411,6 +414,7 @@ button:hover {
     align-items: flex-start;
   }
 }
+
 
 
 
