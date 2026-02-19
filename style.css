@@ -54,7 +54,6 @@ header .left-header {
   height: 80px !important;
   width: auto !important;
   max-width: none !important;
-  image-rendering: auto;
 }
 
 
@@ -406,6 +405,7 @@ button:hover {
     align-items: flex-start;
   }
 }
+
 
 
 
