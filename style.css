@@ -42,7 +42,7 @@ header .left-header {
   gap: 22px;
 }
 
-/* LOGO PRINCIPALE */
+/* LOGO PRINCIPALE (JPEG) */
 .logo-slot {
   width: 160px;
   height: 60px;
@@ -50,12 +50,13 @@ header .left-header {
   align-items: center;
   justify-content: center;
   background: transparent;
+  padding: 0;
 }
 
-.main-logo svg {
+.main-logo-img {
   height: 55px;
   width: auto;
-  display: block;
+  object-fit: contain;
 }
 
 /* SPONSOR HEADER */
@@ -397,4 +398,6 @@ button:hover {
     align-items: flex-start;
   }
 }
+
+
 
