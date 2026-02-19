@@ -45,14 +45,14 @@ header .left-header {
 }
 
 .logo-slot {
-  height: 200%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
 .main-logo-img {
-  height: 700px;        /* quasi tutta l'altezza dell'header (100px) */
+  height: 100px;        /* quasi tutta l'altezza dell'header (100px) */
   width: auto;
   object-fit: contain;
   display: block;
@@ -407,6 +407,7 @@ button:hover {
     align-items: flex-start;
   }
 }
+
 
 
 
