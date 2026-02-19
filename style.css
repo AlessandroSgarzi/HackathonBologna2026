@@ -45,13 +45,13 @@ header .left-header {
 }
 
 .logo-slot {
-  height: 220px;
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 .main-logo-img {
-  height: 220px !important;
+  height: 160px !important;
   width: auto !important;
   object-fit: contain;
   display: block;
@@ -407,6 +407,7 @@ button:hover {
     align-items: flex-start;
   }
 }
+
 
 
 
