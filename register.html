@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Registrazione - Hackathon Bolo 2025</title>
+  <title>Registrazione - Hackathon Bologna 2026</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -10,6 +10,7 @@
 <header>
   <div class="left-header">
     <div class="logo-slot">LOGO</div>
+
     <div class="header-sponsors">
       <div class="header-sponsor-logo"></div>
       <div class="header-sponsor-logo"></div>
@@ -26,15 +27,50 @@
 </header>
 
 <main>
+
   <div class="card">
-    <h2>Registrazione</h2>
+    <h2>Registrazione Hackathon Bologna 2026</h2>
+
     <p>
-      Compila il form per candidarti all’Hackathon Bolo 2025. <br>
-      <strong>Posti limitati: massimo 75 partecipanti.</strong><br>
-      Se vuoi partecipare con qualcuno, <strong>indicate entrambi i nomi nella descrizione</strong>.
+      Compila il form per candidarti all’Hackathon Bologna 2026.
+      L’evento è gratuito ma a <strong>posti limitati</strong>.
     </p>
 
+    <p>
+      <strong>Massimo partecipanti:</strong> 75 <br>
+      <strong>Location:</strong> Smy Hotel Bologna — Viale Angelo Masini 4/3 <br>
+      <strong>Date:</strong> 1 · 2 · 3 Aprile 2026
+    </p>
+
+    <p>
+      Tutti i partecipanti riceveranno un <strong>certificato ufficiale di partecipazione</strong>  
+      valido per meriti scolastici e portfolio personale.
+    </p>
+
+    <p>
+      Sono previsti <strong>premi prestigiosi</strong> per i migliori progetti:  
+      strumenti digitali e risorse utili allo studio e allo sviluppo tecnologico.
+    </p>
+
+    <hr>
+
+    <p>
+      <strong>Partecipazione in team:</strong><br>
+      Se vuoi partecipare con amici o con una squadra già formata,
+      tutti i membri devono indicare nella descrizione:
+      <br>
+      • Nome della squadra <br>
+      • Nomi dei partecipanti
+    </p>
+
+    <p>
+      Se ti iscrivi da solo, verrai assegnato a un team in base a competenze e interessi.
+    </p>
+
+    <hr>
+
     <form id="registerForm">
+
       <label>Nome</label>
       <input type="text" id="nome" required>
 
@@ -44,21 +80,23 @@
       <label>Email</label>
       <input type="email" id="email" required>
 
-      <label>Descrizione (parlaci di te, competenze, interessi, eventuali compagni di team)</label>
-      <textarea id="descrizione" required></textarea>
+      <label>Descrizione</label>
+      <textarea id="descrizione" placeholder="Parlaci di te, competenze, linguaggi, interessi, eventuali compagni di team..." required></textarea>
 
-      <button type="submit">Invia registrazione</button>
+      <button type="submit">Invia candidatura</button>
+
     </form>
 
     <p id="result"></p>
+
   </div>
+
 </main>
 
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
 
 <script>
-  // INCOLLA QUI LA TUA CONFIGURAZIONE FIREBASE
 const firebaseConfig = {
   apiKey: "AIzaSyDlKHXJT_IRS7ZHwuuPCChOHc5ER95c3JM",
   authDomain: "hackbolo-2fd8f.firebaseapp.com",
@@ -69,36 +107,36 @@ const firebaseConfig = {
   measurementId: "G-9V8D6BMMWQ"
 };
 
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore();
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 
-  const form = document.getElementById("registerForm");
-  const result = document.getElementById("result");
+const form = document.getElementById("registerForm");
+const result = document.getElementById("result");
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-    const nome = document.getElementById("nome").value;
-    const cognome = document.getElementById("cognome").value;
-    const email = document.getElementById("email").value;
-    const descrizione = document.getElementById("descrizione").value;
+  const nome = document.getElementById("nome").value;
+  const cognome = document.getElementById("cognome").value;
+  const email = document.getElementById("email").value;
+  const descrizione = document.getElementById("descrizione").value;
 
-    try {
-      await db.collection("registrazioni").add({
-        nome,
-        cognome,
-        email,
-        descrizione,
-        timestamp: new Date()
-      });
+  try {
+    await db.collection("registrazioni").add({
+      nome,
+      cognome,
+      email,
+      descrizione,
+      timestamp: new Date()
+    });
 
-      result.textContent = "Registrazione inviata! Ti contatteremo via email.";
-      form.reset();
-    } catch (err) {
-      console.error(err);
-      result.textContent = "Errore durante la registrazione. Riprova più tardi.";
-    }
-  });
+    result.textContent = "Registrazione inviata con successo. Ti contatteremo via email.";
+    form.reset();
+  } catch (err) {
+    console.error(err);
+    result.textContent = "Errore durante l'invio. Riprova più tardi.";
+  }
+});
 </script>
 
 </body>
