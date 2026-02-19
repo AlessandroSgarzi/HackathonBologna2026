@@ -20,13 +20,6 @@ body {
   letter-spacing: 0.2px;
 }
 
-main {
-  padding-top: 130px; /* era 110px, aumentato per compensare l'header */
-}
-.card:first-child {
-  margin-top: 130px;
-}
-
 /* ---------------- HEADER ---------------- */
 
 header {
@@ -41,30 +34,30 @@ header {
   justify-content: space-between;
   z-index: 1000;
   border-bottom: 1px solid rgba(255,255,255,0.08);
-  height: 170px;
+  height: 110px;
 }
 
 header .left-header {
   display: flex;
   align-items: center;
   gap: 22px;
-  height: 100%; /* FONDAMENTALE: permette al figlio di usare height: 100% */
+  height: 100%;
 }
 
 .logo-slot {
-  height: 160px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
+
 .main-logo-img {
-  height: 160px !important;
-  width: auto !important;
+  height: 95px;
+  width: auto;
   object-fit: contain;
   display: block;
-  filter: brightness(0) invert(1) !important;
+  filter: brightness(0) invert(1);
 }
-
 
 /* SPONSOR HEADER */
 .header-sponsors {
@@ -131,7 +124,7 @@ nav a:hover::after {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 110px;
 }
 
 .hero::after {
@@ -191,7 +184,7 @@ nav a:hover::after {
 /* ---------------- MAIN ---------------- */
 
 main {
-  padding: 110px 40px 70px;
+  padding: 140px 40px 70px; /* 140px top per compensare header da 110px */
   max-width: 1100px;
   margin: auto;
 }
@@ -406,7 +399,7 @@ button:hover {
   }
 
   main {
-    padding: 100px 20px 50px;
+    padding: 130px 20px 50px;
   }
 
   .organizer-card {
@@ -414,20 +407,3 @@ button:hover {
     align-items: flex-start;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
