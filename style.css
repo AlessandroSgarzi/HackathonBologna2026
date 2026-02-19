@@ -41,21 +41,31 @@ header .left-header {
   align-items: center;
   gap: 22px;
 }
-/*LOGO*/
+/* LOGO PRINCIPALE */
 .logo-slot {
-  width: 160px;
-  height: 60px;
+  width: 200px;          /* spazio più grande e proporzionato */
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: transparent;
+  padding: 0;
 }
 
+/* LOGO IMG */
 .main-logo-img {
-  height: 55px;
+  height: 75px;          /* ingrandito */
   width: auto;
   object-fit: contain;
+
+  /* TRASFORMA IL LOGO IN BIANCO */
+  filter: brightness(0) invert(1);
+
+  /* Rimuove eventuali bordi o aloni */
+  background: transparent;
+  display: block;
 }
+
 
 
 /* SPONSOR HEADER */
@@ -397,6 +407,7 @@ button:hover {
     align-items: flex-start;
   }
 }
+
 
 
 
