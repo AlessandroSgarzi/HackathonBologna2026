@@ -20,6 +20,10 @@ body {
   letter-spacing: 0.2px;
 }
 
+main {
+  padding-top: 130px; /* era 110px, aumentato per compensare l'header */
+}
+
 /* ---------------- HEADER ---------------- */
 
 header {
@@ -407,6 +411,7 @@ button:hover {
     align-items: flex-start;
   }
 }
+
 
 
 
