@@ -51,10 +51,11 @@ header .left-header {
   justify-content: flex-start;
 }
 .main-logo-img {
-  height: 80px !important;
+  height: 120px !important;
   width: auto !important;
-  max-width: none !important;
-  filter: brightness(0) invert(1); 
+  object-fit: contain;
+  display: block;
+  filter: brightness(0) invert(1) !important;
 }
 
 
@@ -406,6 +407,7 @@ button:hover {
     align-items: flex-start;
   }
 }
+
 
 
 
