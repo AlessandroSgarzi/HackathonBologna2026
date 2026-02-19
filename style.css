@@ -118,7 +118,7 @@ nav a:hover::after {
 
 .hero {
   height: 88vh;
-  background: url('https://images.unsplash.com/photo-1535223289827-42f1e9919769') center/cover no-repeat;
+  background: url('https://applescoop.org/image/wallpapers/mac/hyperspace-speed-purple-dark-8k-ultra-hd-ultra-hd-computer-desktop-image-screensavers-wallpapers-backgrounds-backdrops-display-image-theme-4k-mac-and-pc-15-03-2025-1742078790-hd-wallpaper.jpg') center/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
@@ -467,4 +467,5 @@ button:hover {
     align-items: flex-start;
   }
 }
+
 
