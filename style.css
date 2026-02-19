@@ -20,7 +20,8 @@ body {
   letter-spacing: 0.2px;
 }
 
-/* HEADER */
+/* ---------------- HEADER ---------------- */
+
 header {
   position: fixed;
   top: 0;
@@ -38,9 +39,52 @@ header {
 header .left-header {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 22px;
 }
 
+/* LOGO PRINCIPALE */
+.logo-slot {
+  width: 160px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.main-logo svg {
+  height: 55px;
+  width: auto;
+  display: block;
+}
+
+/* SPONSOR HEADER */
+.header-sponsors {
+  display: flex;
+  gap: 12px;
+}
+
+.header-sponsor-logo {
+  width: 75px;
+  height: 45px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+  transition: 0.2s;
+}
+
+.header-sponsor-logo:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+/* NAV */
 nav a {
   color: #eaeaea;
   margin-left: 28px;
@@ -69,41 +113,8 @@ nav a:hover::after {
   width:100%;
 }
 
-/* LOGO */
-.logo-slot {
-  width: 160px;
-  height: 60px;
-  background: white;
-  border-radius: 10px;
-  border: 2px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-  font-weight: 700;
-}
+/* ---------------- HERO ---------------- */
 
-/* HEADER SPONSOR */
-.header-sponsors {
-  display: flex;
-  gap: 12px;
-}
-
-.header-sponsor-logo {
-  width: 75px;
-  height: 45px;
-  background: white;
-  border-radius: 8px;
-  opacity: 0.85;
-  transition: 0.2s;
-}
-
-.header-sponsor-logo:hover {
-  transform: translateY(-2px);
-  opacity: 1;
-}
-
-/* HERO */
 .hero {
   height: 88vh;
   background: url('https://images.unsplash.com/photo-1535223289827-42f1e9919769') center/cover no-repeat;
@@ -169,7 +180,8 @@ nav a:hover::after {
   box-shadow: 0 0 40px rgba(0, 234, 255, 0.85);
 }
 
-/* MAIN */
+/* ---------------- MAIN ---------------- */
+
 main {
   padding: 110px 40px 70px;
   max-width: 1100px;
@@ -204,7 +216,7 @@ main {
   line-height: 1.7;
 }
 
-/* LIST */
+/* LISTE */
 ul {
   list-style: none;
   padding: 0;
@@ -215,7 +227,8 @@ ul li {
   color: #d2d2d2;
 }
 
-/* ORGANIZZATORI */
+/* ---------------- ORGANIZZATORI ---------------- */
+
 .organizer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -258,35 +271,8 @@ ul li {
   font-size: 14px;
 }
 
-/* CONTACT */
-.contact-grid{
-  display:flex;
-  gap:40px;
-  margin-top:20px;
-  flex-wrap:wrap;
-}
+/* ---------------- FORM ---------------- */
 
-.contact-item{
-  display:flex;
-  gap:14px;
-  align-items:center;
-  font-size:1.05rem;
-}
-
-.contact-icon{
-  font-size:1.6rem;
-}
-
-/* FAQ */
-.faq-item {
-  margin-bottom: 25px;
-}
-
-.faq-item h3 {
-  color: var(--accent);
-}
-
-/* FORM */
 form {
   display: flex;
   flex-direction: column;
@@ -303,7 +289,7 @@ input, textarea {
   font-family: 'Inter';
 }
 
-input:focus, textarea:focus{
+input:focus, textarea:focus {
   outline:none;
   border-color:var(--accent);
   box-shadow:0 0 12px rgba(0,234,255,0.3);
@@ -330,7 +316,8 @@ button:hover {
   box-shadow: 0 0 30px rgba(0,234,255,0.9);
 }
 
-/* SPONSOR */
+/* ---------------- SPONSOR ---------------- */
+
 .sponsor-section {
   display: grid;
   gap: 28px;
@@ -359,7 +346,7 @@ button:hover {
   transition:0.25s;
 }
 
-.sponsor-card:hover{
+.sponsor-card:hover {
   transform:translateY(-4px);
   box-shadow:0 0 25px rgba(0,234,255,0.25);
 }
@@ -388,7 +375,8 @@ button:hover {
   box-shadow: 0 0 18px rgba(205, 127, 50, 0.25);
 }
 
-/* RESPONSIVE */
+/* ---------------- RESPONSIVE ---------------- */
+
 @media (max-width: 700px) {
   header {
     flex-direction: column;
@@ -409,5 +397,4 @@ button:hover {
     align-items: flex-start;
   }
 }
-
 
