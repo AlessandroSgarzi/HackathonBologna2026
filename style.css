@@ -184,9 +184,59 @@ nav a:hover::after {
 /* ---------------- MAIN ---------------- */
 
 main {
-  padding: 140px 40px 70px; /* 140px top per compensare header da 110px */
-  max-width: 1100px;
+  padding: 40px 40px 70px;
+  max-width: 1200px;
   margin: auto;
+}
+
+/* LAYOUT DUE COLONNE */
+.main-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* SIDEBAR CONTATTI */
+.sidebar-contacts {
+  position: sticky;
+  top: 130px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* CONTENUTO PRINCIPALE */
+.main-content {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.main-content .card:first-child {
+  margin-top: 0;
 }
 
 /* CARD */
@@ -377,6 +427,16 @@ button:hover {
 }
 
 /* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-contacts {
+    position: static;
+  }
+}
 
 @media (max-width: 700px) {
   header {
