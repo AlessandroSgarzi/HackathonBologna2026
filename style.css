@@ -59,7 +59,6 @@ header .left-header {
   filter: brightness(0) invert(1);
 }
 
-/* SPONSOR HEADER */
 .header-sponsors {
   display: flex;
   gap: 12px;
@@ -85,7 +84,6 @@ header .left-header {
   opacity: 1;
 }
 
-/* NAV */
 nav a {
   color: #eaeaea;
   margin-left: 28px;
@@ -145,8 +143,9 @@ nav a:hover::after {
   font-size: 4.8rem;
   font-weight: 800;
   letter-spacing: -1px;
+  line-height: 1.1;
   margin-bottom: 10px;
-  background: linear-gradient(135deg, #ffffff 0%, #00eaff 40%, #ff00ff 80%, #ffffff 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #00eaff 50%, #ff00ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -154,37 +153,33 @@ nav a:hover::after {
 }
 
 .hero h2 {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, #00eaff 0%, #ffffff 60%, #ff00ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 0 10px rgba(0, 234, 255, 0.7));
+  /* FIX: era un gradient trasparente, ora leggibile */
+  color: #c8f4ff;
+  filter: drop-shadow(0 0 10px rgba(0, 234, 255, 0.5));
 }
 
+/* FIX: era color: transparent, ora visibile */
 .hero p {
-  font-size: 1.2rem;
-  color: transparent;
-  margin-bottom: 32px;
-  line-height: 1.6;
-  background: linear-gradient(90deg, #e0e0e0 0%, #ffffff 50%, #c0f0ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
+  font-size: 1.05rem;
+  color: #d8d8d8;
+  margin-bottom: 18px;
+  line-height: 1.7;
 }
 
-.hero strong {
-  background: linear-gradient(90deg, #00eaff, #ff00ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 0 8px rgba(0, 234, 255, 0.9));
+.hero p strong {
+  color: #ffffff;
 }
 
-/* CTA */
+/* GRATUITO in evidenza */
+.hero-gratuito {
+  color: var(--accent);
+  font-weight: 800;
+  text-shadow: 0 0 12px rgba(0, 234, 255, 0.8);
+}
+
 .cta-btn {
   padding: 15px 34px;
   background: linear-gradient(90deg, var(--accent2), var(--accent));
@@ -211,7 +206,6 @@ main {
   margin: auto;
 }
 
-/* LAYOUT DUE COLONNE */
 .main-layout {
   display: grid;
   grid-template-columns: 330px 1fr;
@@ -219,7 +213,6 @@ main {
   align-items: start;
 }
 
-/* SIDEBAR CONTATTI */
 .sidebar-contacts {
   position: sticky;
   top: 130px;
@@ -251,7 +244,6 @@ main {
   flex-shrink: 0;
 }
 
-/* CONTENUTO PRINCIPALE */
 .main-content {
   margin-top: 0;
   padding-top: 0;
@@ -261,7 +253,6 @@ main {
   margin-top: 0;
 }
 
-/* CARD */
 .card {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -289,7 +280,6 @@ main {
   line-height: 1.7;
 }
 
-/* LISTE */
 ul {
   list-style: none;
   padding: 0;
@@ -327,10 +317,13 @@ ul li {
   box-shadow: 0 0 30px rgba(0,234,255,0.4);
 }
 
+/* FIX: background-image rimosso dal CSS, ogni card ha il suo URL inline */
 .organizer-photo {
   width: 110px;
   height: 110px;
-  background: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e') center/cover no-repeat;
+  background-color: rgba(255,255,255,0.08);
+  background-size: cover;
+  background-position: center;
   border-radius: 12px;
   flex-shrink: 0;
 }
@@ -488,8 +481,4 @@ button:hover {
     flex-direction: column;
     align-items: flex-start;
   }
-}
-
-
-
-
+}FF
